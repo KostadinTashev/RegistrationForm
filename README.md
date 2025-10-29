@@ -80,6 +80,7 @@ Runs the project on http://localhost:8000
        email VARCHAR(100) UNIQUE,
        password VARCHAR(100)
    );
-3. Start the server - python server.py
-4. Open browser and go to: http://localhost:8000/cgi-bin/register.py
+3. Install psycopg2 - pip install psycopg2 
+4. Start the server - python server.py
+5. Open browser and go to: http://localhost:8000/cgi-bin/register.py
 
