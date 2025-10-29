@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+    <link rel="stylesheet" href="/static/registration_form.css">
+</head>
+<body>
+<h1>Registration form</h1>
+<p class="subtitle">Please fill in this form to create an account.</p>
+<hr>
+<form action="/cgi-bin/register.py" method="post">
+    <label for="first_name">First name:</label>
+    <input type="text" name="first_name" id="first_name" placeholder="Enter your first name" required>
+    <label for="last_name">Last name:</label>
+    <input type="text" name="last_name" id="last_name" placeholder="Enter your last name" required>
+    <label for="email">Email:</label>
+    <input type="text" name="email" id="email" placeholder="Enter your email" required>
+    <label for="password">Password:</label>
+    <input type="password" name="password" id="password" placeholder="Enter your password" required>
+    <label for="repeat-password">Repeat password:</label>
+    <input type="password" name="repeat-password" id="repeat-password" placeholder="Enter your password" required>
+    <label>Captcha:</label> <b>{captcha}</b>
+
+    <label>
+        <input type="text" name="captcha_input" placeholder="Enter Captcha" required>
+    </label><br>
+    {captcha_hidden}
+    <button type="submit">Register</button>
+</form>
+<div class="sign-in">
+    <p>Already have an account?<a href="/cgi-bin/login.py">Login here</a></p>
+</div>
+</body>
+</html>

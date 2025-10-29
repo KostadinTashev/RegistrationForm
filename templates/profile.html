@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My profile</title>
+    <link rel="stylesheet" href="/static/profile.css">
+</head>
+<body>
+<h1>{first_name} {last_name}'s profile</h1>
+<form action="/cgi-bin/logout.py" method="get" id="logout" style="text-align:center; margin-bottom: 20px;">
+    <button type="submit"
+            style="width:120px; padding:12px; background-color:deepskyblue; color:white; border:none; border-radius:4px; cursor:pointer;">
+        Logout
+    </button>
+</form>
+{message}
+<form action="/cgi-bin/profile.py" method="post">
+    <input type="hidden" name="old_email" value="{email}">
+    <label for="first_name">First_name:</label>
+    <input type="text" name="first_name" id="first_name" value="{first_name}"
+           required>
+    <label for="last_name">Last_name:</label>
+    <input type="text" name="last_name" id="last_name" value="{last_name}" required>
+    <label for="email">Email:</label>
+    <input type="text" name="email" id="email" value="{email}" required>
+    <label for="password">Password:</label>
+    <input type="password" name="password" id="password" value="{password}" required>
+    <button type="submit">Submit</button>
+</form>
+
+</body>
+</html>
